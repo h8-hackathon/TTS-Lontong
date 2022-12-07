@@ -14,7 +14,7 @@ body {
   text-align: center;
 }
 
-#reset-button {
+/* #reset-button {
   width: 50px;
   height: 50px;
   float: left;
@@ -24,9 +24,9 @@ body {
   align-items: center;
   color: #FFFFFF;
   background: gray;
-}
+} */
 
-#nomor-soal {
+/* #nomor-soal {
   width: 50px;
   height: 50px;
   float: right;
@@ -36,22 +36,10 @@ body {
   align-items: center;
   color: #FFFFFF;
   background: gray;
-}
-
-#Info>.container>.kiri {
+} */
+#Info > .container {
   display: flex;
   justify-content: space-between;
-  text-align: left;
-  padding-top: ;
-  padding-left: ;
-}
-
-#Info>.container>.kanan {
-  display: flex;
-  justify-content: space-between;
-  text-align: right;
-  padding-top: ;
-  padding-right: ;
 }
 
 
