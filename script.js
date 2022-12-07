@@ -45,7 +45,7 @@ function render() {
   set('nama-user', nama)
   set('score-user', score)
 
-  set('nomor-soal', `${nomorSoal + 1} / ${tts.length}`)
+  set('nomor-soal', `${nomorSoal + 1}/${tts.length}`)
 
   set('nyawa', nyawa)
   set('bantuan', bantuan)
