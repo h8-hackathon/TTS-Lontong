@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +9,21 @@
   <link rel="stylesheet" href="style.css">
   <script src="data.js"></script>
 </head>
+
 <body>
   <!-- start Container -->
   <section id="Info">
     <!-- start Info -->
     <div class="container">
-      <div class="row">
-        <h1>asdasad</h1>
+      <div class="kiri">
+        <div id = "reset-button">Tombol Reset</div>
+        <h3>Hai <span id = "nama-user">[Input Nama User - JS]</span></h3>
+        <h3> Score Kamu: <span id = "score-user">[Input Score User - JS]</span></h3>
+      </div>
+      <div class="kanan">
+        <div id = "nomor-soal">1 / 20</div>
+        <h3>Icon Bantuan <span id = "bantuan">[Input Jumlah Bantuan Tersisi - JS]</span></h3>
+        <h3>Icon Nyawa <span id = "nyawa">[Input Jumlah Nyawa Tersisa - JS]</span></h3>
       </div>
     </div> 
   </section>
@@ -32,21 +41,39 @@
     <!-- Start Jawaban -->
     <div class="container-fluid">
       <div class="row">
-        <h1>sadjkasd</h1>
+        <h1>Section Jawaban</h1>
+        
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="" />
+          <label for="write-one" class="write" id="write-one-label"></label> 
+        </span>
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="B" />
+          <label for="write-two" class="write" id="write-two-label"></label> 
+        </span>
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="" />
+          <label for="write-three" class="write" id="write-three-label"></label> 
+        </span>
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="" />
+          <label for="write-four" class="write" id="write-four-label"></label> 
+        </span>
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="" />
+          <label for="write-five" class="write" id="write-five-label"></label> 
+        </span>
+        <span>
+          <input type="text" id="write-one" name="write" class="text" value="" />
+          <label for="write-six" class="write" id="write-six-label"></label> 
+        </span>
+        
       </div>
+      <div class="button-container-fluid">
+        <button onclick="handleBantuan()">Bantuan</button>
+      </div> 
     </div> 
   </section>
   <script src="script.js"></script>
 </body>
 </html>
-
-<div class="footer">
-  <footer>
-  <ul>
-      <li><img src="instagram.png" alt=""><p>Instagram</p></a></li>
-      <li><img src="facebook.png" alt=""><p>Facebook</p></a></li>
-      <li><img src="twitter.png" alt=""><p>Twitter</p></a></li>
-      <li><img src="telegram.png" alt=""><p>Telegram</p></a></li>
-  </ul>
-  </footer>
-</div>
