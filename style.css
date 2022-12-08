@@ -144,7 +144,7 @@ span label {
   right: 0;
 }  */
 
-#Info > .container {
+#Info>.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,11 +156,12 @@ span label {
   position: relative;
 }
 
-#Info > .container > .kiri {
+#Info>.container>.kiri {
   display: flex;
   align-items: center;
   gap: 2em;
 }
+
 #reset-button {
   background-color: rgb(255, 255, 255);
   padding: 1.4rem;
@@ -174,14 +175,17 @@ span label {
   cursor: pointer;
   filter: drop-shadow(5px 5px 1px rgb(84, 84, 84));
 }
+
 .button:hover {
   filter: drop-shadow(4px 4px 1px rgb(84, 84, 84));
   transform: translate(1px, 1px);
 }
+
 .button:active {
   filter: drop-shadow(0 0 1px rgb(84, 84, 84));
   transform: translate(3px, 3px);
 }
+
 .container__kiri_kanan {
   display: flex;
   flex-direction: column;
@@ -189,20 +193,21 @@ span label {
   font-size: x-large;
 }
 
-.container__kiri_kanan > .username {
+.container__kiri_kanan>.username {
   color: yellow;
 }
-.container__kiri_kanan > .score {
+
+.container__kiri_kanan>.score {
   color: #eee;
 }
 
-.container > .kanan {
+.container>.kanan {
   display: flex;
   flex-direction: row-reverse;
   gap: 2em;
 }
 
-.container > .kanan > h3 {
+.container>.kanan>h3 {
   font-size: xx-large;
 }
 
@@ -224,7 +229,7 @@ span label {
   height: 85vh;
 }
 
-#Jawaban > .container-fluid {
+#Jawaban>.container-fluid {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -233,7 +238,7 @@ span label {
   gap: 1em;
 }
 
-#Jawaban > .container-fluid > .row {
+#Jawaban>.container-fluid>.row {
   padding: 50px;
   display: flex;
   gap: 10px;
@@ -262,11 +267,12 @@ span label {
   right: 20px;
 }
 
-.button-container-fluid > button {
+.button-container-fluid>button {
   padding: 10px;
   border-radius: 20px;
   border: none;
 }
+
 #Soal {
   display: flex;
   justify-content: flex-end;
@@ -282,11 +288,11 @@ span label {
 }
 
 .hide {
-  visibility: hidden;
+  display: none;
 }
 
 .box-soal {
-  background-color:rgb(255, 187, 60);
+  background-color: rgb(255, 187, 60);
   padding: 20px;
   font-size: 18pt;
   border-radius: 20px;
@@ -307,7 +313,7 @@ span label {
   padding-right: 40px;
 }
 
-.modal-menang {
+.modal-menang, .modal-login {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -340,4 +346,68 @@ span label {
 .modal-footer {
   display: flex;
   justify-content: space-around;
+  background-color: #1d97bd;
+  align-items: center;
+  z-index: 1000;
+}
+
+.login-game {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.mulai-main {
+  width: 350px;
+  height: 500px;
+  background: red;
+  overflow: hidden;
+  background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+
+.mulaimain {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #FFCA19;
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #023747;
+}
+
+.isi-nama {
+  text-justify: auto;
+  font-size: xx-large;
+  color: #eee;
+  font-family: Helvetica;
+  padding-top: 50px;
+  font-family: 'Lucida Sans';
+  font-weight: bold;
+}
+
+.input-nama-pemain {
+  width: 70%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
 }
