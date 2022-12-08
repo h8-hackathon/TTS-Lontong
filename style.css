@@ -306,3 +306,13 @@ span label {
   color: white;
   padding-right: 40px;
 }
+
+.modal-menang {
+  position: fixed;
+  justify-content: center;
+  height: 100vh;
+  width: 100vh;
+  background-color: aqua;
+  align-items: center;
+  z-index: 100;
+}
