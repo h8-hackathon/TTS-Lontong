@@ -313,6 +313,32 @@ span label {
   padding-right: 40px;
 }
 
+.modal-pass-level {
+  position: fixed;
+  background-color: rgb(0, 0, 0, 0.5);
+  align-items: center;
+  height: 100vh;
+  width:100vw;
+  z-index: 100;
+  justify-content: center;
+  display: flex;
+}
+.modal-content {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  border: 5px solid #21568a;
+  padding: 20px;
+}
+
+}
+.modal-body {
+  padding-top: 5px;
+  font-size: medium;
+  font-weight: bold;
+  
+}
+
 .modal-menang, .modal-login {
   position: fixed;
   display: flex;
