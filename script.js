@@ -7,7 +7,7 @@ let nomorSoal = 0
 let clues = []
 let jawabanUser = []
 
-let nama = 'Jhon Doe'
+let nama = ''
 
 function getRandomClue(jawaban, arr) {
   if (arr) {
@@ -37,8 +37,6 @@ function set(id, value) {
   document.getElementById(id).innerHTML = value
 }
 
-function showLogin() {}
-
 function render() {
   if (!nama) {
     showLogin()
@@ -55,7 +53,7 @@ function render() {
 
   set('soal', tts[nomorSoal].pertanyaan)
   // set('komen', tts[nomorSoal].komentar)
-  if(!clues.length) {
+  if (!clues.length) {
     clues = getRandomClue(tts[nomorSoal].jawaban)
   }
   jawabanUser = [...clues]
@@ -71,19 +69,25 @@ function render() {
 }
 
 function cekJawaban() {
-  console.log(jawabanUser, tts[nomorSoal].jawaban)
   if (
     tts[nomorSoal].jawaban
       .split('')
       .map((value) => value.toUpperCase())
       .every((value, i) => value === jawabanUser[i].toUpperCase())
   ) {
-    
-    next()
+    if (nomorSoal === tts.length - 1) {
+      document
+        .getElementById('modal-menang')
+        .classList.replace('hide', 'modal-menang')
 
-  }
+      return
+    }
 
-  else {
+    document
+      .getElementById('modal-pass-level')
+      .classList.replace('hide', 'modal-pass-level')
+    document.getElementById('modal-komen').innerHTML = tts[nomorSoal].komentar
+  } else {
     nyawa--
     render()
   }
@@ -116,6 +120,7 @@ const kamus = 'abcdefghijklmnopqrstuvwxyz'
 
 document.addEventListener('keypress', (event) => {
   const key = event.key.toUpperCase()
+  if (!nama) return
   if (key === 'ENTER') {
     cekJawaban()
     return
@@ -130,9 +135,8 @@ document.addEventListener('keypress', (event) => {
   }
 })
 
-
 function tambahClue() {
-  if(jawabanUser.every(value => value) || bantuan < 1) return
+  if (jawabanUser.every((value) => value) || bantuan < 1) return
   bantuan--
   clues = getRandomClue(tts[nomorSoal].jawaban, clues)
   jawabanUser = [...clues]
@@ -148,13 +152,58 @@ function tambahClue() {
   //   document.getElementById('jawaban').appendChild(newBox)
   // })
 }
-function next() {
+function lanjut() {
+  document
+    .getElementById('modal-pass-level')
+    .classList.replace('modal-pass-level', 'hide')
   if (tts[nomorSoal + 1]) {
     clues = []
     nomorSoal++
     render()
     return
   }
+}
+
+function hideLogin() {
+  document.getElementById('login-page').classList.replace('modal-login', 'hide')
+}
+
+function login() {
+  const name = document.getElementById('username')
+  if (!name.value) return
+  nama = name.value
+
+  hideLogin()
+  render()
+}
+
+function keluar() {
+  score = 0
+  nyawa = 15
+  bantuan = 15
+
+  nomorSoal = 0
+
+  clues = []
+  jawabanUser = []
+
+  nama = ''
+  document.getElementById('login-page').classList.replace('hide', 'modal-login')
+  document.getElementById('username').value = ''
+}
+function ulangi() {
+  score = 0
+  nyawa = 15
+  bantuan = 15
+
+  nomorSoal = 0
+
+  clues = []
+  jawabanUser = []
+  document
+    .getElementById('modal-menang')
+    .classList.replace('modal-menang', 'hide')
+  render()
 }
 
 render()
