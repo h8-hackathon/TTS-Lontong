@@ -36,27 +36,26 @@
     <!-- Start Soal & Komentar -->
     <img src="images/lontong.png" alt="lontong" class="lontong">
     <div class="container-soal">
-      <div class="pass-level" tabindex="-1">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">JAWABAN MU BENAR!</h5>
-              <button type="button" class="btn-clone" data-bs-dismiss="modal" aria-label="Tutup"></button>
-            </div>
-            <div class="modal-body">
-              <p>Ternyata kamu lumayan jago dalam memainkan nya.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-              <button type="button" class=" btn btn-primary">Lanjut</button>
-            </div>
-          </div>
-        </div> 
-      </div>
       <div id="soal" class="box-soal soal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto a hic reprehenderit, optio aperiam, nulla nemo dolore ut sunt soluta necessitatibus. Ex cupiditate minus id eos vel sequi ipsam repudiandae?</div>
       <div id="komen" class="box-soal komen"></div>
     </div>
     </section>
+    <div class="modal-pass-level" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">JAWABAN MU BENAR!</h5>
+          </div>
+          <div class="modal-body">
+            <p>Ternyata kamu lumayan jago dalam memainkan nya.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button"onclick="tutup()" class="btn btn-secondary button" data-bs-dismiss="modal">Tutup</button>
+            <button type="button"onclick="lanjut()" class=" btn btn-primary button">Lanjut</button>
+          </div>
+        </div>
+      </div> 
+    </div>
   
   <section id="Jawaban">
     <!-- Start Jawaban -->
