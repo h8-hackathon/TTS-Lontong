@@ -11,6 +11,21 @@
 </head>
 
 <body>
+  <div class = "modal-login">
+    <div class="mulai-main">  	
+        <div class="login-game">
+          <form>
+            <p style="text-align:center"  class="isi-nama">Silakan Isi Nama <br> Korban Hari Ini</p>
+            <input id="username" class="input-nama-pemain" type="text" name="txt" placeholder="Masukan Nama Kamu" required="">
+            <button type="button" onclick="login()" class="mulaimain">Mulai Main</button>
+            <img src="images/lontong.png" alt="cak-lontong">
+          </form>
+        </div>
+    </div>
+  </div>
+
+  
+  
   <!-- start Container -->
   <section id="Info">
     <!-- start Info -->
@@ -31,7 +46,23 @@
       </div>
     </div> 
   </section>
-  
+
+  <div class="modal-menang" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>Selamat Anda Menang !</p> <!-- bisa dipakai buat komentar -->
+        </div>
+        <button type="button"onclick="tutup()" class="btn btn-secondary button" data-bs-dismiss="modal">Tutup</button>
+        <button type="button"onclick="lanjut()" class=" btn btn-primary button">Lanjut</button>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary button" data-dismiss="modal">Ulangi</button>
+          <button type="button" class="btn btn-secondary button" data-dismiss="modal">Keluar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <section id="Soal"> 
     <!-- Start Soal & Komentar -->
     <img src="images/lontong.png" alt="lontong" class="lontong">
