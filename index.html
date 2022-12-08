@@ -17,7 +17,7 @@
     <div class="container">
       <div class="kiri">
         <div class="container__kiri_kiri">
-          <button id = "reset-button">❌</button>
+          <button class="button" id = "reset-button">❌</button>
         </div>
         <div class="container__kiri_kanan">
           <h3 class="username">Hai <span id = "nama-user">[Input Nama User - JS]</span></h3>
@@ -35,40 +35,23 @@
   <section id="Soal"> 
     <!-- Start Soal & Komentar -->
     <img src="images/lontong.png" alt="lontong" class="lontong">
-  </section>
+    <div class="container-soal">
+
+      <div id="soal" class="box-soal soal">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto a hic reprehenderit, optio aperiam, nulla nemo dolore ut sunt soluta necessitatibus. Ex cupiditate minus id eos vel sequi ipsam repudiandae?</div>
+      <div id="komen" class="box-soal komen"></div>
+    </div>
+    </section>
   
   <section id="Jawaban">
     <!-- Start Jawaban -->
     <div class="container-fluid">
-      <div class="row">
-          <span>
-            <input type="text" id="write-one" name="write" class="text" value="" />
-            <label for="write-one" class="write" id="write-one-label"></label> 
-          </span>
-          <span>
-            <input type="text" id="write-one" name="write" class="text" value="B" />
-          <label for="write-two" class="write" id="write-two-label"></label> 
-        </span>
-        <span>
-          <input type="text" id="write-one" name="write" class="text" value="" />
-          <label for="write-three" class="write" id="write-three-label"></label> 
-        </span>
-        <span>
-          <input type="text" id="write-one" name="write" class="text" value="" />
-          <label for="write-four" class="write" id="write-four-label"></label> 
-        </span>
-        <span>
-          <input type="text" id="write-one" name="write" class="text" value="" />
-          <label for="write-five" class="write" id="write-five-label"></label> 
-        </span>
-        <span>
-          <input type="text" id="write-one" name="write" class="text" value="" />
-          <label for="write-six" class="write" id="write-six-label"></label> 
-        </span>
+      <div class="info">tekan enter untuk cek jawaban</div>
+      <div class="row" id="jawaban">
         
       </div>
-      <div class="button-container-fluid">
-        <button onclick="handleBantuan()">Bantuan</button>
+      
+      <div class="button-container-fluid button">
+        <button id="buttom-button" class="" onclick="tambahClue()">🔑 Bantuan</button>
       </div> 
     </div> 
   </section>

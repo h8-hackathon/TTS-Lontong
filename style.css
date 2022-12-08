@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #21568A;
+  background-color: #21568a;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -144,14 +144,16 @@ span label {
   right: 0;
 }  */
 
-
 #Info > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #1D97BD;
+  background-color: #1d97bd;
   border-radius: 0 10px 30px 30px;
+  filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+  z-index: 99;
+  position: relative;
 }
 
 #Info > .container > .kiri {
@@ -160,20 +162,26 @@ span label {
   gap: 2em;
 }
 #reset-button {
-  background-color: rgb(95, 95, 95);
+  background-color: rgb(255, 255, 255);
   padding: 1.4rem;
   border-radius: 10px;
-  border: 5px solid black;
+  border: 5px solid white;
   font-weight: bold;
-  filter: drop-shadow(3px 3px 1px rgb(84, 84, 84));
-  font-size:large;
+  font-size: large;
 }
 
-#reset-button:active {
+.button {
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 1px rgb(84, 84, 84));
+}
+.button:hover {
+  filter: drop-shadow(4px 4px 1px rgb(84, 84, 84));
+  transform: translate(1px, 1px);
+}
+.button:active {
   filter: drop-shadow(0 0 1px rgb(84, 84, 84));
   transform: translate(3px, 3px);
 }
-
 .container__kiri_kanan {
   display: flex;
   flex-direction: column;
@@ -185,7 +193,7 @@ span label {
   color: yellow;
 }
 .container__kiri_kanan > .score {
-  color: #eee
+  color: #eee;
 }
 
 .container > .kanan {
@@ -199,13 +207,13 @@ span label {
 }
 
 #Soal {
-  background-color: #21568A;
+  background-color: #21568a;
   flex-grow: 1;
 }
 
 #Jawaban {
-  background-color: #0B223A;
-  height: 30vh;
+  background-color: #0b223a;
+  height: 35vh;
 }
 
 .lontong {
@@ -217,12 +225,12 @@ span label {
 }
 
 #Jawaban > .container-fluid {
- display: flex;
- align-items: flex-end;
- flex-direction: column;
- height: 100%;
- justify-content: center;
- gap: 1em;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  gap: 1em;
 }
 
 #Jawaban > .container-fluid > .row {
@@ -232,11 +240,69 @@ span label {
 }
 
 .text {
-  width: 80px;
+  width: 100px;
   position: relative;
   padding: 15px 27px;
   font-size: 80pt;
   border: 9px solid white;
   background-color: rgb(255, 187, 60);
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-clue {
+  background-color: bisque;
+}
+
+.button-container-fluid {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.button-container-fluid > button {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+#Soal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-soal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  padding: 100px 50px;
+  gap: 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.box-soal {
+  background-color:rgb(255, 187, 60);
+  padding: 20px;
+  font-size: 18pt;
+  border-radius: 20px;
+  border: 10px solid white;
+}
+
+.komen {
+  background-color: #0b223a;
+  color: #eee;
+}
+
+.lanjut {
+  background-color: rgb(119, 255, 119);
+}
+
+.info {
+  color: white;
+  padding-right: 40px;
 }
