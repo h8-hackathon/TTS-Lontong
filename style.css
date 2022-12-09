@@ -34,12 +34,17 @@ body {
 }
 
 #reset-button {
-  background-color: rgb(255, 255, 255);
+  background-color: #1d97bd;
   padding: 1.4rem;
   border-radius: 10px;
   border: 5px solid white;
   font-weight: bold;
   font-size: large;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 
 .button {
@@ -56,6 +61,41 @@ body {
   filter: drop-shadow(0 0 1px rgb(84, 84, 84));
   transform: translate(3px, 3px);
 }
+
+.container__kiri_kiri > .keluar-syon:before, 
+.container__kiri_kiri > .keluar-syon:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* background: red; */
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+/* .container__kiri_kiri span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: #1d97bd;
+  z-index: 100;
+} */
+
+.container__kiri_kiri > .keluar-syon:nth-child()::before, 
+.container__kiri_kiri > .keluar-syon:nth-child():after {
+  background: linear-gradient(45deg, red #1d97bd #1d97bd #1d97bd red);
+}/* gagal ini */
+
+.container__kiri_kiri > .keluar-syon:hover:before{
+  inset: -3px;
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+}/* gagal ini */
 
 .container__kiri_kanan {
   display: flex;
@@ -165,9 +205,13 @@ body {
 .box-soal {
   background-color: rgb(255, 187, 60);
   padding: 20px;
-  font-size: 18pt;
+  font-size: 30pt;
   border-radius: 20px;
   border: 10px solid white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .komen {
@@ -182,6 +226,7 @@ body {
 .info {
   color: white;
   padding-right: 40px;
+  /* border:1px solid black; */
 }
 
 .modal-pass-level {
